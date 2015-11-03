@@ -1,11 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe EmailAddress, type: :model do
-  let(:address) do
-    EmailAddress.new(address: 'nicole@gmail.com')
-  end
+  let(:email_address) {EmailAddress.new(address: 'nicole@gmail.com')}
 
-  it 'has an array of email addresses' do
-    expect(person.addresseses).to eq([])
+
+  it 'is valid' do
+    expect(email_address).to be_valid
   end
 end
